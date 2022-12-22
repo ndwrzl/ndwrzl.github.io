@@ -1,0 +1,16 @@
+{
+  "common": {
+    "welcome": "Hey there, I'm Ander. I have had a passion for computers and technology since I was little, and I spend my time learning and exploring technologies, I manage Linux and Windows systems efficiently.\nI'm currently learning Cybersecurity, React and Rust.",
+    "intro": "IT • Software Engineering • Junior SysAdmin",
+    "projects": "Projects",
+    "madewith": "Made with"
+  },
+  "projects": {
+    "wakeonlan": "Wake on LAN server to wake computers remotely.",
+    "youtubedownloader": "YoutubeDL GUI with video and audio quality selector.",
+    "mcpanel": "Minecraft server control panel.",
+    "discobot": "Discord bot written entirely on AutoHotkey and with a dashboard.",
+    "diduwatch": "Shows the sequels of anime you haven't yet seen from AniList.",
+    "sambamanager": "View samba audit logs easily from a Web UI, blazingly fast."
+  }
+}

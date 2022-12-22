@@ -1,0 +1,16 @@
+{
+  "common": {
+    "welcome": "Hola, soy Ander. Me apasiona la informática y la tecnología desde pequeño, y paso mi tiempo aprendiendo y explorando tecnologías. Manejo sistemas Linux y Windows con eficacia.\nActualmente estoy aprendiendo Ciberseguridad, React y Rust.",
+    "intro": "TIC • Desarrollador de software • Administrador de sistemas principiante",
+    "projects": "Proyectos",
+    "madewith": "Hecho con"
+  },
+  "projects": {
+    "wakeonlan": "Servidor Wake on LAN para encender computadoras de forma remota.",
+    "youtubedownloader": "GUI de YoutubeDL con selector de calidad de video y audio.",
+    "mcpanel": "Panel de control de servidor de Minecraft.",
+    "discobot": "Bot de Discord escrito completamente en AutoHotkey y con un panel de control.",
+    "diduwatch": "Muestra las secuelas de anime que aún no has visto de AniList.",
+    "sambamanager": "Vea los registros de auditoría de samba fácilmente desde una interfaz web rapidísima"
+  }
+}
