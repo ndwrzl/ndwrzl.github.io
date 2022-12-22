@@ -72,10 +72,6 @@ body,
   z-index: 1;
 }
 
-.expanded .content {
-  user-select: text;
-}
-
 .languagePick {
   user-select: none;
   cursor: pointer;

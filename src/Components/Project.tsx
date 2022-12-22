@@ -83,12 +83,12 @@ export function Expanded(props: ProjectProps) {
           ref={el}
         >
           <motion.div
-            className="project-image-container relative max-h-[200px] lg:max-h-[500px]"
+            className="project-image-container max-h-[200px] lg:max-h-[500px]"
             // layoutId={`project-image-container-${props.id}`}
           >
             <img src={props.image} alt={`${props.name}`} />
           </motion.div>
-          <div className="content m-5 flex grow flex-col">
+          <div className="m-5 flex select-text flex-col">
             <motion.div
               initial={{ scale: 0, rotate: 0 }}
               animate={{ scale: 1 }}
@@ -115,7 +115,6 @@ export function Expanded(props: ProjectProps) {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{
-                staggerChildren: 1,
                 duration: 1,
                 ease: "easeInOut",
               }}
