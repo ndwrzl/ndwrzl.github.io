@@ -83,6 +83,10 @@ body,
   padding-right: 5px;
 }
 
+.icons svg {
+  shape-rendering: geometricPrecision;
+}
+
 .underline {
   position: absolute;
   top: 0;
@@ -106,4 +110,41 @@ body,
   border-radius: 5px;
   z-index: 1;
   background: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  50% {
+    scale: 1 1.5;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+#mouse {
+  background-color: white;
+  height: 40vmax;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, #6b0e8c, #150571);
+  animation: rotate 20s infinite;
+  opacity: 0.8;
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  backdrop-filter: blur(50000px);
 }

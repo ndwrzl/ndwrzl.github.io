@@ -5,12 +5,13 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, Variants } from "framer-motion";
 
+
 export function Intro() {
   const { t, i18n } = useTranslation();
   const [language, setLanguage] = useState(i18n.language);
 
   return (
-    <div className="flex w-full flex-col bg-gradient-to-b from-[#111111] to-[#28282B] p-5 font-arvo drop-shadow-2xl lg:h-full lg:w-96 lg:py-10">
+    <div className="relative z-[3] flex w-full flex-col bg-gradient-to-b from-[#111111] to-[#28282B] p-5 font-arvo drop-shadow-2xl lg:h-full lg:w-96 lg:py-10">
       <Switch
         language={language}
         onClick={() => {
@@ -40,7 +41,7 @@ const socialMotion: Variants = {
   hover: {
     scale: 1.2,
     transition: {
-      duration: 0.3,
+      duration: 0.5,
       ease: "easeInOut",
     },
   },
