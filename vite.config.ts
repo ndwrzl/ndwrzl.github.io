@@ -4,7 +4,7 @@ import { resolve } from "node:path";
 
 export default defineConfig(() => {
   return {
-    base: "/portfolio",
+    base: "/",
     resolve: {
       alias: [
         {
@@ -13,9 +13,7 @@ export default defineConfig(() => {
         },
       ],
     },
-    plugins: [
-      react(),
-    ],
+    plugins: [react()],
     build: {
       rollupOptions: {
         output: {

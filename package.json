@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.0.0",
   "private": "true",
-  "homepage": "https://ndwrzl.github.io/portfolio",
+  "homepage": "https://ndwrzl.github.io/",
   "type": "module",
   "scripts": {
     "build": "vite build",
