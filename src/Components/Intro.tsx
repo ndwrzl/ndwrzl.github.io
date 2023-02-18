@@ -5,7 +5,6 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, Variants } from "framer-motion";
 
-
 export function Intro() {
   const { t, i18n } = useTranslation();
   const [language, setLanguage] = useState(i18n.language);

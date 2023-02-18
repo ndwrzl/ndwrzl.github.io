@@ -1,19 +1,16 @@
-import useDebugRender from "tilg";
 import { useTranslation } from "react-i18next";
 import { Intro } from "./Components/Intro";
 import { Projects } from "./Components/Projects";
 import { motion, Variants } from "framer-motion";
-import { MouseFollow } from "./Components/Mouse"
+import { MouseFollow } from "./Components/Mouse";
 import "./i18n";
 
 export default function App() {
-  useDebugRender();
-
   return (
-    <div className="relative overflow-hidden flex w-full flex-col bg-gradient-to-bl from-[#02aa85] to-[#c200ff] text-slate-100 lg:h-full lg:flex-row">
+    <div className="relative flex w-full flex-col overflow-hidden bg-gradient-to-bl from-[#02aa85] to-[#c200ff] text-slate-100 lg:h-full lg:flex-row">
       <Intro />
       <MouseFollow />
-      <div className="z-[3] relative w-full px-6 font-arvo md:overflow-y-auto md:py-4 md:px-14">
+      <div className="relative z-[3] w-full px-6 font-arvo md:overflow-y-auto md:py-4 md:px-14">
         <Welcome></Welcome>
         <Icons></Icons>
         <Projects />

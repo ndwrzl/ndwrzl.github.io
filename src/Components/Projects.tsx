@@ -7,7 +7,7 @@ import { Project as ProjectType, projects } from "../projects";
 export function Projects() {
   const { t } = useTranslation();
   const [expandedCard, setExpandedCard] = useState<
-    typeof projects[0] | undefined
+    (typeof projects)[0] | undefined
   >();
 
   const expandedClick = () => {
