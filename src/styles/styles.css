@@ -147,3 +147,21 @@ body,
   z-index: 2;
   backdrop-filter: blur(50000px);
 }
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip-text {
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 5px;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+  visibility: hidden;
+}
