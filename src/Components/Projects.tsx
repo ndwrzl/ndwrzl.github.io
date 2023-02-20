@@ -1,6 +1,6 @@
 import { Expanded, Project } from "@/Components/Project";
 import { useTranslation } from "react-i18next";
-import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Project as ProjectType, projects } from "../projects";
 

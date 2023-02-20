@@ -1,6 +1,6 @@
 import { Icon } from "@/Components/DevIcons";
 import { type Project } from "@/projects";
-import { motion, Variants } from "framer-motion";
+import { motion, useMotionValue, useTransform, Variants } from "framer-motion";
 import { useTranslation } from "react-i18next";
 // @ts-ignore
 import { useOuterClick } from "react-outer-click";

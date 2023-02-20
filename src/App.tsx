@@ -11,7 +11,7 @@ export default function App() {
     return "ontouchstart" in window;
   }
   return (
-    <div className="relative flex w-full flex-col overflow-hidden bg-gradient-to-bl from-[#02aa85] to-[#c200ff] text-slate-100 lg:h-full lg:flex-row">
+    <div className="relative flex w-full flex-col overflow-hidden bg-gradient-to-bl from-[#02aa85] to-[#c200ff]  text-slate-100 lg:h-full lg:flex-row">
       {!hasTouch() ? <MouseFollow /> : null}
       <Intro />
       <div className="relative z-[3] w-full px-6 font-arvo md:overflow-y-auto md:py-4 md:px-14">

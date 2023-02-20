@@ -29,8 +29,8 @@ export const Tooltip: React.FC<TooltipProps> = ({
 }) => {
   return (
     <m.div
-      className="tooltip"
       {...rest}
+      className="tooltip"
       whileHover="hover"
       animate="rest"
       initial="rest"
