@@ -3,7 +3,7 @@ import FeatherIcon from "feather-icons-react";
 import { Switch } from "@/Components/LanguageSwitch";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { motion, Variants } from "framer-motion";
+import { Social } from "./SocialButtons";
 
 export function Intro() {
   const { t, i18n } = useTranslation();
@@ -28,34 +28,10 @@ export function Intro() {
         <Social url="https://github.com/ndwrzl">
           <FeatherIcon icon="github"></FeatherIcon>
         </Social>
-        <Social url="mailto:ndwrzl@protonmail.com">
+        <Social url="mailto:ndwrzl@proton.me">
           <FeatherIcon icon="mail"></FeatherIcon>
         </Social>
       </div>
     </div>
-  );
-}
-
-const socialMotion: Variants = {
-  hover: {
-    scale: 1.2,
-    transition: {
-      duration: 0.5,
-      ease: "easeInOut",
-    },
-  },
-};
-
-function Social({ url, children }: { url: string; children: any }) {
-  return (
-    <motion.a
-      className="drop-shadow-xl"
-      variants={socialMotion}
-      whileHover="hover"
-      target="_blank"
-      href={url}
-    >
-      {children}
-    </motion.a>
   );
 }
