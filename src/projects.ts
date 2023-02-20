@@ -1,9 +1,14 @@
 import wolImg from "@/projects/wakeonlan.webp";
-import ytImg from "@/projects/ytdl.jpg";
-import mcImg from "@/projects/mcpanel.png";
-import anilistImg from "@/projects/anilist.png";
-import discobotImg from "@/projects/discobot.png";
-import sambamanagerImg from "@/projects/samba.png";
+// @ts-ignore
+import ytImg from "@/projects/ytdl.jpg?webp&width=400";
+// @ts-ignore
+import mcImg from "@/projects/mcpanel.png?webp&width=400";
+// @ts-ignore
+import anilistImg from "@/projects/anilist.png?webp&width=400";
+// @ts-ignore
+import discobotImg from "@/projects/discobot.png?webp&width=400";
+// @ts-ignore
+import sambamanagerImg from "@/projects/samba.png?webp&width=400";
 
 type Button = string;
 
