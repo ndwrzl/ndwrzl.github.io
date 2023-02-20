@@ -18,7 +18,7 @@ const icons = [
   "vscode",
 ];
 
-const iconMotion: Variants = {
+const groupMotion: Variants = {
   hidden: { scale: 0 },
   show: {
     scale: 1,
@@ -29,31 +29,36 @@ const iconMotion: Variants = {
   },
 };
 
-export function Icons() {
-  const wrap = (icon: string) => (
-    <Tooltip text={icon.toUpperCase()}>
-      <motion.div variants={iconMotion}>
-        <Icon icon={icon}></Icon>
-      </motion.div>
-    </Tooltip>
-  );
+const iconMotion: Variants = {
+  hidden: { scale: 0 },
+  show: {
+    scale: 1,
+  },
+};
 
+export function Icons() {
   return (
     <motion.div
-      variants={iconMotion}
+      variants={groupMotion}
       initial="hidden"
       animate="show"
       className="my-4 flex flex-wrap gap-2"
     >
-      {icons.map((icon) => wrap(icon))}
+      {icons.map((icon, i) => (
+        <Icon icon={icon} key={i}></Icon>
+      ))}
     </motion.div>
   );
 }
 
 export function Icon(props: { icon: string }) {
   return (
-    <i
-      className={`devicon-${props.icon}-plain colored devicon cursor-pointer text-5xl drop-shadow-xl`}
-    ></i>
+    <motion.div variants={iconMotion}>
+      <Tooltip text={props.icon.toUpperCase()}>
+        <i
+          className={`devicon-${props.icon}-plain colored devicon cursor-pointer text-5xl drop-shadow-xl`}
+        ></i>
+      </Tooltip>
+    </motion.div>
   );
 }
