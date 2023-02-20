@@ -38,26 +38,27 @@ export function Project(props: ProjectProps) {
     <motion.div
       initial="hidden"
       animate="show"
+      layout
       variants={projectMotion}
       onClick={props.onTap}
       whileHover="hover"
       transition={{ duration: 0.15, ease: "easeInOut" }}
-      className={`project flex h-72 w-full cursor-pointer snap-center flex-col rounded-md bg-zinc-600 shadow-gray-900 drop-shadow-2xl sm:w-80`}
+      className={`project flex h-72 w-full cursor-pointer flex-col rounded-md bg-zinc-600 shadow-gray-900 sm:w-80`}
       layoutId={`project-${props.id}`}
     >
-      <motion.div
-        className="project-image-container drop-shadow-2xl"
-        // layoutId={`project-image-container-${props.id}`}
-      >
-        <img
-          className="object-cover object-top"
-          src={props.image}
-          alt={`${props.name}`}
-        />
-      </motion.div>
-      <motion.div className="project-title-container">
-        <span className="project-title font-arvo text-2xl">{props.name}</span>
-      </motion.div>
+      <img
+        className="project-image object-cover object-top"
+        src={props.image}
+        alt={`${props.name}`}
+      />
+      <div className="project-title-container relative">
+        <span
+          className="absolute bottom-4 right-4 font-arvo text-2xl"
+          // layoutId={`project-title-${props.id}`}
+        >
+          {props.name}
+        </span>
+      </div>
     </motion.div>
   );
 }
@@ -73,40 +74,37 @@ export function Expanded(props: ProjectProps) {
     <motion.div
       className="fullscreen"
       initial={{ opacity: 0 }}
-      exit={{ opacity: 0, transition: { duration: 0.2 } }}
-      animate={{ opacity: 1, transition: { duration: 0.3 } }}
+      exit={{ opacity: 0, transition: { duration: 0.2, ease: "linear" } }}
+      animate={{ opacity: 1, transition: { duration: 0.3, ease: "linear" } }}
     >
-      <div className="project-content-container flex justify-center">
+      <div className="flex justify-center p-8">
         <motion.div
-          className={`project expanded container flex w-full flex-col rounded-md bg-zinc-600 shadow-2xl lg:w-[900px] lg:flex-row`}
+          className={`project expanded container relative flex w-full flex-col rounded-md bg-zinc-600 shadow-2xl will-change-transform lg:w-[900px] lg:flex-row`}
           layoutId={`project-${props.id}`}
           ref={el}
         >
-          <motion.div
-            className="project-image-container max-h-[200px] lg:max-h-[500px]"
-            // layoutId={`project-image-container-${props.id}`}
-          >
-            <img src={props.image} alt={`${props.name}`} />
-          </motion.div>
+          <div className="h-full max-h-[200px] w-full lg:max-h-[500px]">
+            <img
+              className="project-image"
+              src={props.image}
+              alt={`${props.name}`}
+            />
+          </div>
           <div className="m-5 flex select-text flex-col">
             <motion.div
               initial={{ scale: 0, rotate: 0 }}
               animate={{ scale: 1 }}
               whileHover={{ scale: 1.5, rotate: 90 }}
               onClick={() => props.onTap()}
-              className="absolute right-7 top-7 z-10 -m-7 cursor-pointer p-7"
+              className="absolute right-5 top-4 z-10 -m-7 cursor-pointer p-7 will-change-transform"
             >
               <FeatherIcon icon="x"></FeatherIcon>
             </motion.div>
             <span className="font-arvo text-2xl">{props.name}</span>
             <hr className="mb-5 h-px border-0 bg-gray-400"></hr>
-            <motion.div
-              className="project-description"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-            >
+            <div className="project-description">
               <span className="py-7 text-lg">{t("projects." + props.id)}</span>
-            </motion.div>
+            </div>
             <p>
               {t("common.madewith")}:
               {getMade && props.madewithtext && " " + getMade.join(", ") + "."}
@@ -118,22 +116,17 @@ export function Expanded(props: ProjectProps) {
                 duration: 1,
                 ease: "easeInOut",
               }}
-              className="flex flex-row flex-wrap justify-center gap-3 text-5xl"
+              className="flex flex-row flex-wrap justify-center gap-3"
             >
               {getMade &&
                 props.madewith &&
                 getMade.map((icon) => <Icon icon={icon} key={icon}></Icon>)}
             </motion.div>
             <div className="grow"></div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.7, ease: "easeIn" }}
-              className="buttons mt-3 flex flex-col flex-wrap gap-3"
-            >
+            <div className="buttons mt-3 flex flex-col flex-wrap gap-3">
               <Button url={props.github}>Github</Button>
               <Button url={props.demo}>Demo</Button>
-            </motion.div>
+            </div>
           </div>
         </motion.div>
       </div>
